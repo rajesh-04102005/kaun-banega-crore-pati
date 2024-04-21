@@ -1,0 +1,31 @@
+questions = [ 
+    ["In which language fb is created?", "Python", "French", "Javascript", "php", "None", 4],
+    ["In which language fb is created?", "Python", "French", "Javascript", "php", "None", 4],
+    ["In which language fb is created?", "Python", "French", "Javascript", "php", "None", 4],
+    ["In which language fb is created?", "Python", "French", "Javascript", "php", "None", 4],
+]
+
+money = 0
+
+levels = [1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 320000]
+
+for i in range(len(questions)):
+    question = questions[i]
+    print(f"Question for Rs. {levels[i]}")
+    print(f"a. {question[1]}       b. {question[2]}")
+    print(f"c. {question[3]}       d. {question[4]}")
+
+    reply = int(input("Enter your option: "))
+
+    if(reply == question[-1]):
+        print(f"Correct answer, you've Won Rs. {levels[i]}")
+        if(i == len(levels)-1):
+            money = 10000000
+        else:
+            money = levels[i]
+    else:
+        print("Wrong answer!")
+        break
+
+print(f"Your take over money is {money}")
+
